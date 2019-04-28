@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from collections import Iterable
+from collections import Iterable, Iterator
 
 dict = {"a" : 1, "b" : 2, "c" : 3, "d" : 4}
 str = "abcd"
@@ -58,6 +58,11 @@ if __name__ == '__main__':
     split("for循环中同时引用多个变量")
     for x, y in [(0, 1), (1, 1), (2, 1)]:
         print(x, y)
+
+
+    # iter()函数将list、disc、set等非Iterator数据类型转换为Iterator
+    split("iter()")
+    print(isinstance(iter([1, 2, 3]), Iterator))
 
     # 练习
     split("练习: 查找list中最下最大值")
